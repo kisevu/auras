@@ -6,7 +6,8 @@
 <h1 id="aura-technologies-–-non‑pci-card-payments-existing-flow">Aura Technologies – Non‑PCI Card Payments (Existing Flow)</h1>
 <h2 id="overview">Overview</h2>
 <p>Aura Technologies is a non‑PCI‑compliant merchant that uses Flocash’s non‑PCI tokenization flow so that raw card data never touches the merchant backend.</p>
-<p>The existing Postman collection <code>Aura Technologies</code> implements the following:</p>
+ <p> <mark>The merchant collects a card using client-side encryption. It then sends that to Flocash. </mark></p>
+<p>The existing Postman collection <code>Aura Technologies</code> implements the following: </p>
 <ul>
 <li>Retrieve a public key.</li>
 <li>Encrypt card details in the browser.</li>
@@ -37,8 +38,6 @@
 </ul>
 </li>
 <li>CVV must never be stored.</li>
-<li>Public keys may rotate periodically.</li>
-<li>Tokenized transactions may still require issuer authentication (e.g., 3DS).</li>
 </ul>
 <hr>
 <h2 id="endpoints-as-implemented-in-the-collection">Endpoints (As Implemented in the Collection)</h2>
